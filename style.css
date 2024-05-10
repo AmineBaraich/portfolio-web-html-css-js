@@ -65,10 +65,10 @@ a:hover {
   }
   
   .text {
-      font-size: 3rem;
+      font-size: 2rem;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid black;
+      border-right: 2px solid black;
       width: auto;
       animation: none; /* No animation directly applied here */
   }
