@@ -1,4 +1,3 @@
-
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -6,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
 }
 
 body {
@@ -60,48 +60,59 @@ a:hover {
 }
 
 .logo {
-    font-size: 2rem;
-    display: inline-block;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.text {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  width: auto;
+  animation: none; /* No animation directly applied here */
+}
+
+.text .visible,
+.text .fading {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text .visible {
+  animation: typing-visible 4s steps(40, end) forwards; /* Customize duration according to typing speed */
+}
+
+.text .fading {
+  animation: typing-fading 4s steps(40, end) forwards, fade-out 0.5s 2s forwards; /* Starts fading after typing ends */
+}
+
+@keyframes typing-visible {
+  from {
+    width: 0;
   }
-  
-  .text {
-      font-size: 2rem;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid black;
-      width: auto;
-      animation: none; /* No animation directly applied here */
+  to {
+    width: 100%;
+  } /* Adjust width to fit "BIENVENUE" */
+}
+
+@keyframes typing-fading {
+  from {
+    width: 0;
   }
-  
-  .text .visible, .text .fading {
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
+  to {
+    width: 100%;
+  } /* Adjust width to fit "SUR MON SITE" */
+}
+
+@keyframes fade-out {
+  to {
+    width: 0;
+    opacity: 0;
   }
-  
-  .text .visible {
-      animation: typing-visible 4s steps(40, end) forwards; /* Customize duration according to typing speed */
-  }
-  
-  .text .fading {
-      animation: typing-fading 4s steps(40, end) forwards, fade-out 0.5s 2s forwards; /* Starts fading after typing ends */
-  }
-  
-  @keyframes typing-visible {
-      from { width: 0; }
-      to { width: 100%; } /* Adjust width to fit "BIENVENUE" */
-  }
-  
-  @keyframes typing-fading {
-      from { width: 0; }
-      to { width: 100%; } /* Adjust width to fit "SUR MON SITE" */
-  }
-  
-  @keyframes fade-out {
-      to { width: 0; opacity: 0; }
-  }
-  
-  
+}
+
 .logo:hover {
   cursor: default;
 }
@@ -190,7 +201,6 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -198,6 +208,7 @@ section {
 
 .section-container {
   display: flex;
+  flex-wrap: wrap; /* Ensure content doesn't overlap */
 }
 
 /* PROFILE SECTION */
@@ -237,6 +248,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 #socials-container {
@@ -345,7 +357,7 @@ section {
 
 .section-container {
   gap: 4rem;
-  height: 80%;
+  margin-bottom: 4rem; /* Add space below sections */
 }
 
 .section__pic-container {
@@ -358,6 +370,7 @@ section {
 
 #experience {
   position: relative;
+  padding-bottom: 6vh; /* Add padding to separate from the next section */
 }
 
 .experience-sub-title {
@@ -469,4 +482,100 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* Experience Timeline Section Styling */
+#experience-timeline {
+  padding: 4rem 0;
+  background-color: #f7f7f7; /* Optional: Add a background color to distinguish this section */
+}
+
+#experience-timeline .title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12.5px;
+  background-color: #333;
+  border: 4px solid #fff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item .timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive Timeline */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::after {
+    left: 60px;
+  }
+
+  .timeline::after {
+    left: 60px;
+  }
 }
