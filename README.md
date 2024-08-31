@@ -6,7 +6,7 @@ This repository contains a portfolio website template that I use. The template i
 
 To run the code locally and see live updates as you make changes, you need to have the **Live Server** extension installed in your code editor. This extension helps in testing modifications quickly.
 
-- **Live Server**: [Documentation and Installation Guide](https://github.com/ritwickdey/vscode-live-server)
+- **Live Server**: [Documentation](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ### Installation
 
@@ -22,13 +22,13 @@ To run the code locally and see live updates as you make changes, you need to ha
 
 ### Customization
 
-You can customize the website by editing the HTML, CSS, and JavaScript files in this repository. Use the Live Server to preview your changes instantly.
+You need to customize the website by editing the HTML, CSS, and JavaScript files in this repository. Use the Live Server to preview your changes instantly.
 
 ## Hosting and Deployment
 
 To host and deploy the website, I recommend using **Netlify**. Here's a quick guide to deploying your site:
 
-1. Create a Netlify account: [Netlify Sign Up](https://app.netlify.com/signup)
+1. Create a Netlify account: [Netlify Sign Up](https://www.netlify.com/)
 
 2. Once logged in, click on **"Add a new site"**.
 
@@ -44,6 +44,3 @@ Your portfolio website is now live and accessible online.
 
 Feel free to fork this repository, make your changes, and submit a pull request. Contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
