@@ -2,13 +2,13 @@
 
 This repository contains a portfolio website template that I use. The template is simple to use and easy to customize.[Demo](https://playful-faun-6e8918.netlify.app/)
 
-### Prerequisites
+### Prerequisites :
 
 To run the code locally and see live updates as you make changes, you need to have the **Live Server** extension installed in your code editor. This extension helps in testing modifications quickly.
 
 - **Live Server**: [Documentation](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-### Installation
+### Steps :
 
 1. Clone the repository:
    ```bash
@@ -20,11 +20,11 @@ To run the code locally and see live updates as you make changes, you need to ha
    - Right-click on the `index.html` file and select "Open with Live Server" (if using VSCode).
    - Alternatively, follow the Live Server documentation for other editors.
 
-### Customization
+### Customization :
 
 You need to customize the website by editing the HTML, CSS, and JavaScript files in this repository. Use the Live Server to preview your changes instantly.
 
-## Hosting and Deployment
+## Hosting and Deployment :
 
 To host and deploy the website, I recommend using **Netlify**. Here's a quick guide to deploying your site:
 
